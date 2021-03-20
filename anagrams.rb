@@ -19,3 +19,18 @@
 # Try varying the length of the input strings. What are the differences between 
 # #first_anagram? and #second_anagram??
 
+def second_anagram?(str1,str2)   #n
+    words = str1.split("")
+    word2 = str2.split("")
+    words.each_with_index do |char,i|
+        new_idx = word2.find_index(char)
+        if new_idx != nil 
+            word2.delete(word2[new_idx])
+        end
+    end
+    word2.empty?
+end
+
+
+
+
