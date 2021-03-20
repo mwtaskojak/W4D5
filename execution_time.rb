@@ -49,17 +49,17 @@
     # largest_contiguous_subsum(list) # => 8
 
     # possible sub-sums
-   p [5]           # => 5
-    [5, 3]        # => 8 --> we want this one
-    [5, 3, -7]    # => 1
-   p [3]           # => 3
-    [3, -7]       # => -4
-   p [-7]          # => -7
+#    [5]           # => 5
+#     [5, 3]        # => 8 --> we want this one
+#     [5, 3, -7]    # => 1
+#     [3]           # => 3
+#     [3, -7]       # => -4
+#     [-7]          # => -7
     
         require 'byebug'
       
-        def largest_contiguous_subsum(arr)
-            debugger
+        def largest_contiguous_subsum(arr)    #O(n^3)
+            # debugger
             subs = []
 
             arr.each_index do |idx1|
