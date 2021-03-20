@@ -32,5 +32,17 @@ def second_anagram?(str1,str2)   #n
 end
 
 
+# Phase III:
+# Write a method #third_anagram? that solves the problem by sorting both strings alphabetically. 
+# The strings are then anagrams if and only if the sorted versions are the identical.
+
+# What is the time complexity of this solution? Is it better or worse than #second_anagram??
+
+def third_anagram?(str1,str2)
+    word1=str1.split("")
+    word2=str2.split("")
+    word1.sort == word2.sort
+end 
+
 
 
