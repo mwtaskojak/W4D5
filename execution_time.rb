@@ -25,4 +25,18 @@ list = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
         min 
     end 
 
+    # Phase II
+    # Now rewrite the function to iterate through the list just once while keeping track of the minimum.
+    # What is the time complexity?
+
+    def my_min_2(arr)    #O(N)
+        min_num = arr.first
+      
+       arr.each { |num| min_num = num if num < min_num }
+      
+        min_num
+      end
+    end 
+
     
+      
