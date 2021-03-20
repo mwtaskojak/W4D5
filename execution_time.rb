@@ -74,9 +74,32 @@
             
         end 
 
+        # Phase II
+        # Let's make a better version. Write a new function using O(n) time with O(1) memory. 
+        # Keep a running tally of the largest sum.
+        #  To accomplish this efficient space complexity, consider using two variables.
+        #   One variable should track the largest sum so far and another to track the current sum.
+        #    We'll leave the rest to you.
 
+        def better_subsum(arr)
+            largest = 0 
+            sum = 0 
+            i = 0 
+            j = 0
 
-
+            while i != arr.length-1
+                largest += arr[j]
+                sum = largest if largest > sum 
+                if j == arr.length-1 
+                    i+=1 
+                    j = i 
+                    largest = 0 
+                else
+                    j+=1
+                end 
+            end 
+            sum 
+        end 
       
 
        
