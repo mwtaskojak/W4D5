@@ -44,5 +44,30 @@ def third_anagram?(str1,str2)
     word1.sort == word2.sort
 end 
 
+# Phase IV:
+# Write one more method #fourth_anagram?. 
+# This time, use two Hashes to store the number of times each letter appears in both words.
+#  Compare the resulting hashes.
+
+# What is the time complexity?
+
+# Bonus: Do it with only one hash.
+
+def fourth_anagram?(str1,str2)
+    hash1 = Hash.new(0)
+    hash2 = Hash.new(0)
+    word1=str1.split("")
+    word2=str2.split("")
+    word1.each do |char|
+        hash1[char] +=1
+    end
+    word2.each do |char|
+        hash2[char] +=1
+    end
+    hash1.each do |k,v|
+        return false if !hash2.has_key?(k) || !hash2.has_value?(v)  
+    end
+    true
+end
 
 
