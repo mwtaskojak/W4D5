@@ -81,7 +81,7 @@
         #   One variable should track the largest sum so far and another to track the current sum.
         #    We'll leave the rest to you.
 
-        def better_subsum(arr)
+        def better_subsum(arr)  # o(n)
             largest = 0 
             sum = 0 
             i = 0 
