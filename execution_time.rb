@@ -68,9 +68,14 @@
                  end
              end
 
-                subs.map { |sub| sub.inject(:+) }.max
+                subs.map { |sub| sub.inject(:+) }.max  # n the ruby inject method, when no block is passed in, 
+                # it looks if the first argument is a symbol (i.e. :+) for the method to use. 
+                # In this case it will recognize :+ as a symbol and know it needs to sum the entire list.
             
         end 
+
+
+
 
       
 
